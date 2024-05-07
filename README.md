@@ -11,7 +11,7 @@ The Tennessee-Eastman-Process (TEP) simulates the production of two products (G 
 - Recycler compressor
 - Product stripper
 <br>
-![alt](resources/tep_pnid.PNG)
+!(https://github.com/Antonizitron/tep_alarms_text/blob/main/resources/tep_pnid.PNG)
 <br>
 
 ## Dataset and Alarm Management
