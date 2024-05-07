@@ -9,3 +9,5 @@ Original work used a process proposed by J.J. Downs and E.F. Vogel in 1993 in a 
 - Recycler compressor
 - Product stripper
 
+Pthe simplified P&ID:
+![alt TEP P&ID](https://github.com/Antonizitron/tep_alarms_text/blob/main/resources/tep_pnid.PNG?raw=true)
