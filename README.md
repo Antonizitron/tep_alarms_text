@@ -17,6 +17,8 @@ The simplified P&ID:
 
 The dataset published by IEEE contains results of process simulation in a normal stady state and abnormal conditions with Active Root Cause and Normalizarion phases. While former simualtion did not have any alarms, later one generated good number of messages. Remaingin portion of work described alarms management approached aimed to reduce number of neusance alarms.
 
+## Text Dataset
+
 The dataset orginized in 3 csv files, simialr to origianl work:
 - Original: contains alarms from all 100 Test Cases with no Alarm Management technics
 - Filtered: alarms with implemened filters
@@ -34,7 +36,7 @@ Each csv file have 5 columns:
 - description: alarm description as seen on operator's console
 - test: number of test from the original dataset. Test cases separated by 3 hours gap.
  
-Reference:
+# Reference:
 - Gianluca Manca, November 1, 2020, ""Tennessee-Eastman-Process" Alarm Management Dataset", IEEE Dataport, doi: https://dx.doi.org/10.21227/326k-qr90.
 - J.J. Downs and E.F. Vogel, “A plant-wide industrial process control problem,” Comput. Chem. Eng., vol. 17, no. 3, pp. 245–255, Mar. 1993, doi: 10.1016/0098-1354(93)80018-I.
 - A. Bathelt, N. Lawrence Ricker and M. Jelali, “Revision of the Tennessee Eastman Process Model,”. IFAC-PapersOnLine, vol. 48, no. 8, pp. 309–314, Jun. 2015, doi: 10.1016/j.ifacol.2015.08.199.
