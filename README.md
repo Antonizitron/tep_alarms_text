@@ -1,40 +1,45 @@
-# Tennessee Eastman Process Alarms in Text Format
-The datasets represents Industrial Control System's (ICS) Alarms in text format, recreated from "Tennessee-Eastman-Process" Alarm Management Dataset:
-Gianluca Manca, November 1, 2020, ""Tennessee-Eastman-Process" Alarm Management Dataset", IEEE Dataport, doi: https://dx.doi.org/10.21227/326k-qr90.
+# Industrial Control System (ICS) Alarm Text Dataset - Based on Tennessee Eastman Process
+This repository provides a textual dataset of Industrial Control System (ICS) alarms, derived from the "Tennessee-Eastman-Process" Alarm Management Dataset by Gianluca Manca (2020): "Tennessee-Eastman-Process" Alarm Management Dataset, IEEE Dataport.
 
-Original work is based a process proposed by J.J. Downs and E.F. Vogel in 1993 in a publication "A plant-wide industrial process control problem", with changes by A. Bathelt, N. Lawrence Ricker and M. Jelali, “Revision of the Tennessee Eastman Process Model” and E. Arroyo, “Capturing and Exploiting Plant Topology and Process Information as a Basis to Support Engineering and Operational Activities in Process Plants”.
-The Tennessee-Eastman-Process simulates the production of two products (G and H) from four reactants (A, C, D, and E). It includes five major units:
+## Origin and Process Description
+The original work is based on a process proposed by J.J. Downs and E.F. Vogel in 1993 ("A plant-wide industrial process control problem"), with subsequent modifications by A. Bathelt, N. Lawrence Ricker, M. Jelali (“Revision of the Tennessee Eastman Process Model”) and E. Arroyo (“Capturing and Exploiting Plant Topology and Process Information as a Basis to Support Engineering and Operational Activities in Process Plants”).
+
+The Tennessee-Eastman-Process (TEP) simulates the production of two products (G and H) from four reactants (A, C, D, and E) and comprises five major units:
 - Reactor
 - Condenser
 - Vapor/liquid separator
 - Recycler compressor
 - Product stripper
-
-The simplified P&ID:
 <br>
 ![alt TEP P&ID](https://github.com/Antonizitron/tep_alarms_text/blob/main/resources/tep_pnid.PNG?raw=true)
 <br>
 
-The dataset published by IEEE contains results of process simulation in a normal stady state and abnormal conditions with Active Root Cause and Normalizarion phases. While former simualtion did not have any alarms, later one generated good number of messages. Remaingin portion of work described alarms management approached aimed to reduce number of neusance alarms.
+## Dataset and Alarm Management
+The IEEE dataset includes simulation results under normal steady-state and abnormal conditions, encompassing Active Root Cause and Normalization phases. While the normal simulation did not generate alarms, the abnormal conditions produced a significant number of alarm messages. The remaining portion of the work focused on alarm management techniques to reduce nuisance alarms.
 
-## Text Dataset
+## Text Dataset Structure
+The dataset is organized into 3 CSV files, mirroring the original work:
+- Original: Contains alarms from all 100 test cases without any alarm management techniques applied.
+- Filtered: Includes alarms after implementing filtering techniques.
+- Deadband: Contains alarms after implementing deadband techniques.
 
-The dataset orginized in 3 csv files, simialr to origianl work:
-- Original: contains alarms from all 100 Test Cases with no Alarm Management technics
-- Filtered: alarms with implemened filters
-- Deadband: alarms with implemened deadbands
+Each CSV file has 5 columns:
+- **timestamp**: Timestamp of the alarm (start time and date are arbitrary and can be adjusted).
+- **tag**: Name of the tag that triggered the alarm.
+- **type**: Type of alarm, which can be one of the following 8 values (note that a tag can only have 1 type of alarm at any given time):
+  * LL: Low Low alarm
+  * L: Low alarm
+  * H: High alarm
+  * HH: High High alarm
+  * LL NR/L NR/H NR/HH NR: Recovery messages for the respective alarms (e.g., when a Process Variable exceeds the Low alarm setpoint, the system generates an L NR message).
+**description**: Description of the alarm as displayed on the operator's console.
+**test**: Number of the test case from the original dataset (test cases are separated by 3-hour intervals).
 
-Each csv file have 5 columns:
-- timestamp: timestamp of the alarm. Start time and datse selected arbitrary and can be changed.
-- tag: tag name that caused alarm.
-- type: type of alarm. Can be one of 8 values (please note that in any point of time tag can be in only 1 type of alarm):
-    * LL: Low Low alarm
-    * L: Low alarm
-    * H: High alarm
-    * HH: High High alarm
-    * LL NR/L NR/H NR/HH NR: Recovery messages of appropriate alarms (when for example Process Variable becomes higher than Low alarm setpoint, the system generates L NR message)
-- description: alarm description as seen on operator's console
-- test: number of test from the original dataset. Test cases separated by 3 hours gap.
+## Potential Applications
+This dataset can be valuable for research and development in various areas, including:
+- Anomaly detection and fault diagnosis in ICS
+- Development and evaluation of machine learning models for alarm analysis
+- Evaluation of LLM models for industrial applications (embedding, summarization, questions answering)
  
 # Reference:
 - Gianluca Manca, November 1, 2020, ""Tennessee-Eastman-Process" Alarm Management Dataset", IEEE Dataport, doi: https://dx.doi.org/10.21227/326k-qr90.
