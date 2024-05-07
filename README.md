@@ -31,8 +31,8 @@ Each csv file have 5 columns:
     * H: High alarm
     * HH: High High alarm
     * LL NR/L NR/H NR/HH NR: Recovery messages of appropriate alarms (when for example Process Variable becomes higher than Low alarm setpoint, the system generates L NR message)
-  - description: alarm description as seen on operator's console
-  - test: number of test from the original dataset. Test cases separated by 3 hours gap.
+- description: alarm description as seen on operator's console
+- test: number of test from the original dataset. Test cases separated by 3 hours gap.
  
   Reference:
   - Gianluca Manca, November 1, 2020, ""Tennessee-Eastman-Process" Alarm Management Dataset", IEEE Dataport, doi: https://dx.doi.org/10.21227/326k-qr90.
