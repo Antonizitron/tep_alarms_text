@@ -2,14 +2,16 @@
 This repository provides a textual dataset of Industrial Control System (ICS) alarms, derived from the "Tennessee-Eastman-Process" Alarm Management Dataset by Gianluca Manca (2020): "Tennessee-Eastman-Process" Alarm Management Dataset, IEEE Dataport.
 
 ## Origin and Process Description
-The original work is based on a process proposed by J.J. Downs and E.F. Vogel in 1993 ("A plant-wide industrial process control problem"), with subsequent modifications by A. Bathelt, N. Lawrence Ricker, M. Jelali (“Revision of the Tennessee Eastman Process Model”) and E. Arroyo (“Capturing and Exploiting Plant Topology and Process Information as a Basis to Support Engineering and Operational Activities in Process Plants”).
+The Tennessee Eastman Process (TEP) is a widely used simulation model of a chemical plant, originally developed by Downs and Vogel in 1993. It serves as a realistic platform for researchers and engineers to test and benchmark control strategies, fault detection methods, and process monitoring techniques. The TEP simulates a complex chemical process involving five major units: a reactor, a condenser, a compressor, a separator, and a stripper. These units work together to convert four gaseous reactants (A, C, D, and E) into two liquid products (G and H).
 
-The Tennessee-Eastman-Process (TEP) simulates the production of two products (G and H) from four reactants (A, C, D, and E) and comprises five major units:
-- Reactor
-- Condenser
-- Vapor/liquid separator
-- Recycler compressor
-- Product stripper
+The model's complexity and realistic behavior have made it a valuable tool in the field of process control and related research areas. Several researchers have contributed to its refinement and analysis, notably A. Bathelt, N. Lawrence Ricker, and M. Jelali in their work "Revision of the Tennessee Eastman Process Model" and E. Arroyo in "Capturing and Exploiting Plant Topology and Process Information as a Basis to Support Engineering and Operational Activities in Process Plants."
+
+Key Components of the TEP:
+- **Reactor**: The heart of the process where the gaseous reactants (A, C, D, and E) undergo a chemical reaction to produce the desired liquid products (G and H) along with a byproduct (F).
+- **Condenser**: This unit cools down the gaseous product stream exiting the reactor, causing some components to condense into a liquid state.
+- **Separator**: The cooled product stream enters the separator, where it is separated into its gaseous and liquid components.
+- **Compressor**: The gas stream from the separator, containing unreacted reactants and byproduct, is recycled back into the reactor by the compressor.
+- **Stripper**: The liquid stream from the separator goes to the stripper, where the final products (G and H) are separated from any remaining unreacted components and byproduct.
 
 <br>
 
@@ -37,6 +39,8 @@ Each CSV file has 5 columns:
   * LL NR/L NR/H NR/HH NR: Recovery messages for the respective alarms (e.g., when a Process Variable exceeds the Low alarm setpoint, the system generates an L NR message).
 **description**: Description of the alarm as displayed on the operator's console.
 **test**: Number of the test case from the original dataset (test cases are separated by 3-hour intervals).
+
+This dataset, while not encompassing the full range of alarms seen in modern control systems, offers a practical representation of real-time industrial processes, enabling the testing and refinement of tools and approaches before deployment in production environments.
 
 ## Potential Applications
 This dataset can be valuable for research and development in various areas, including:
