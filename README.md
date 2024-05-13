@@ -24,9 +24,11 @@ The IEEE dataset includes simulation results under normal steady-state and abnor
 
 ## Text Dataset Structure
 The dataset is organized into 3 CSV files, mirroring the original work:
-- Original: Contains alarms from all 100 test cases without any alarm management techniques applied.
-- Filtered: Includes alarms after implementing filtering techniques.
-- Deadband: Contains alarms after implementing deadband techniques.
+- TEP_alarms_original.csv: Contains alarms from all 100 test cases without any alarm management techniques applied.
+- TEP_alarms_filter.csv: Includes alarms after implementing filtering techniques.
+- TEP_alarms_deadband.csv: Contains alarms after implementing deadband techniques.
+
+As you can see, the proposed alarm management techniques reduced the total number of alarms by 90%. Using a deadband further reduced alarms by an additional 80%.
 
 Each CSV file has 5 columns:
 - **timestamp**: Timestamp of the alarm (start time and date are arbitrary and can be adjusted).
