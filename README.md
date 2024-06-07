@@ -39,7 +39,7 @@ Each CSV file has 4 columns:
   * H: High alarm
   * HH: High High alarm
   * LL NR/L NR/H NR/HH NR: Recovery messages for the respective alarms (e.g., when a Process Variable exceeds the Low alarm setpoint, the system generates an L NR message).
-**description**: Description of the alarm as displayed on the operator's console.
+- **description**: Description of the alarm as displayed on the operator's console.
 
 This dataset, while not encompassing the full range of alarms seen in modern control systems, offers a practical representation of real-time industrial processes, enabling the testing and refinement of tools and approaches before deployment in production environments.
 
