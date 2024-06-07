@@ -30,7 +30,7 @@ The dataset is organized into 3 categories, mirroring the original work:
 
 As you can see, the proposed alarm management techniques reduced the total number of alarms by 90%. Using a deadband further reduced alarms by an additional 80%.
 
-Each CSV file has 5 columns:
+Each CSV file has 4 columns:
 - **timestamp**: Timestamp of the alarm (start time and date are arbitrary and can be adjusted).
 - **tag**: Name of the tag that triggered the alarm.
 - **type**: Type of alarm, which can be one of the following 8 values (note that a tag can only have 1 type of alarm at any given time):
