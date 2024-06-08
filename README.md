@@ -23,14 +23,14 @@ Key Components of the TEP:
 The IEEE dataset includes simulation results under normal steady-state and abnormal conditions, encompassing Active Root Cause and Normalization phases. While the normal simulation did not generate alarms, the abnormal conditions produced a significant number of alarm messages. The remaining portion of the work focused on alarm management techniques to reduce nuisance alarms.
 
 ## Text Dataset Structure
-The dataset is organized into 3 CSV files, mirroring the original work:
-- TEP_alarms_original.csv: Contains alarms from all 100 test cases without any alarm management techniques applied.
-- TEP_alarms_filter.csv: Includes alarms after implementing filtering techniques.
-- TEP_alarms_deadband.csv: Contains alarms after implementing deadband techniques.
+The dataset is organized into 3 categories, mirroring the original work:
+- Original: Contains alarms without any alarm management techniques applied.
+- Filtered: Includes alarms after implementing filtering techniques.
+- Deadband: Contains alarms after implementing deadband techniques.
 
 As you can see, the proposed alarm management techniques reduced the total number of alarms by 90%. Using a deadband further reduced alarms by an additional 80%.
 
-Each CSV file has 5 columns:
+Each CSV file has 4 columns:
 - **timestamp**: Timestamp of the alarm (start time and date are arbitrary and can be adjusted).
 - **tag**: Name of the tag that triggered the alarm.
 - **type**: Type of alarm, which can be one of the following 8 values (note that a tag can only have 1 type of alarm at any given time):
@@ -39,8 +39,7 @@ Each CSV file has 5 columns:
   * H: High alarm
   * HH: High High alarm
   * LL NR/L NR/H NR/HH NR: Recovery messages for the respective alarms (e.g., when a Process Variable exceeds the Low alarm setpoint, the system generates an L NR message).
-**description**: Description of the alarm as displayed on the operator's console.
-**test**: Number of the test case from the original dataset (test cases are separated by 3-hour intervals).
+- **description**: Description of the alarm as displayed on the operator's console.
 
 This dataset, while not encompassing the full range of alarms seen in modern control systems, offers a practical representation of real-time industrial processes, enabling the testing and refinement of tools and approaches before deployment in production environments.
 
